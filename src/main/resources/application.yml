@@ -1,0 +1,43 @@
+# jdbc 配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hpan?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    hikari:
+      max-lifetime: 120000
+  data:
+    redis:
+      port: 12345
+      host: localhost
+      password: xxxx
+      database: 0
+      timeout: 100000
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 10000
+  session:
+    redis:
+      flush-mode: on_save
+      save-mode: always
+
+server:
+  port: 2560
+  servlet:
+    context-path: /api
+    session:
+      timeout: 86400
+#      store-type: redis
+
+# mybatis plus 逻辑删除
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      logic-delete-field: is_deleted
+
