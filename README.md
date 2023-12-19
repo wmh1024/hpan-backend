@@ -13,9 +13,9 @@
     <img src="image/icon.png" alt="Logo" width="100" height="100">
   </a>
 
-<h3 align="center">Hpan下载合集 - 前端 （用户端）</h3>
+<h3 align="center">Hpan下载合集 - 后端</h3>
   <p align="center">
-    基于Vue3、Arco Design组件库的下载合集用户界面！
+    基于Springboot3、Redis和MySQL的下载合集后端！
     <br />
 
 </p>
@@ -45,13 +45,17 @@ mvn package -DskipTests
 4、生产打包
 
 ```sh
-java -jar .\user-center-backend-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+java -jar ./user-center-backend-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
 ```
 
 ## 使用到的框架
 
-- Vue3
-- Arco Design组件库
+- Springboot3
+- Jdk17
+- MySQL 5.7
+- Redis
+- Maven
+- Lombok
 
 ## 如何参与开源项目
 
